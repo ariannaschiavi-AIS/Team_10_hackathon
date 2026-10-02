@@ -1,0 +1,657 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Cashy Review Simulator</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Visual layer: humanitarian case-management look. UNHCR-inspired blues, warm orange for the cost of error,
+   soft rounded surfaces. Content and logic are unchanged. */
+:root{
+  --paper:#e3eaf3;--sheet:#ffffff;--ink:#0f2742;--ink-2:#45586f;--rule:#c9d5e3;--rule-2:#dfe6ef;--hdr:#f1f5fa;--strong:#18375f;
+  --accent:#0072bc;--accent-strong:#005b97;--accent-soft:#e2eefa;--on-accent:#ffffff;
+  --warn:#c9461a;--warn-soft:#fdeee6;--ok:#00806a;--ok-soft:#ddf3ee;
+  --lite:#7a8ba1;--lite-soft:#eef2f7;--old:#6c4f9a;--old-soft:#f1ecf8;--sun:#ffc740;
+  --navy:#18375f;--navy-2:#0f2a4b;
+  --shadow:0 1px 2px rgba(22,48,79,.05),0 6px 20px rgba(22,48,79,.07);
+  --shadow-sm:0 1px 2px rgba(22,48,79,.06);
+  --f-display:"Lato","Helvetica Neue",Arial,sans-serif;--f-body:"Lato","Helvetica Neue",Arial,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0a1320;--sheet:#132234;--ink:#f0f5fb;--ink-2:#aebfd2;--rule:#2d4560;--rule-2:#203449;--hdr:#1a2d44;--strong:#2b4c78;
+  --accent:#4ea8ec;--accent-strong:#7cc0f2;--accent-soft:#12304d;--on-accent:#06192b;
+  --warn:#f08a5d;--warn-soft:#3b2318;--ok:#3ec6a6;--ok-soft:#0f342d;--lite:#9cb0c7;--lite-soft:#1a2b40;--old:#b79be3;--old-soft:#271f3d;
+  --navy:#0a1626;--navy-2:#07111e;--shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);--shadow-sm:0 1px 2px rgba(0,0,0,.3);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0a1320;--sheet:#132234;--ink:#f0f5fb;--ink-2:#aebfd2;--rule:#2d4560;--rule-2:#203449;--hdr:#1a2d44;--strong:#2b4c78;
+  --accent:#4ea8ec;--accent-strong:#7cc0f2;--accent-soft:#12304d;--on-accent:#06192b;
+  --warn:#f08a5d;--warn-soft:#3b2318;--ok:#3ec6a6;--ok-soft:#0f342d;--lite:#9cb0c7;--lite-soft:#1a2b40;--old:#b79be3;--old-soft:#271f3d;
+  --navy:#0a1626;--navy-2:#07111e;--shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);--shadow-sm:0 1px 2px rgba(0,0,0,.3);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;padding-inline:clamp(12px,2.5vw,32px);padding-block:16px 64px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin-inline:auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-display);margin:0;letter-spacing:-.005em;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(26px,3.2vw,34px);font-weight:900;line-height:1.15}
+h2{font-size:22px;font-weight:900}
+h3{font-size:16.5px;font-weight:700}
+p{margin:0}
+b{font-weight:700}
+.mono{font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-2)}
+.small{font-size:13.5px}
+.kicker{font-family:var(--f-body);font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.banner{font-size:13px;color:var(--ink-2);border:1px dashed var(--rule);border-radius:12px;padding:8px 12px;background:var(--sheet)}
+
+/* app bar */
+.appbar{display:flex;justify-content:space-between;align-items:center;gap:14px 20px;flex-wrap:wrap;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);border-radius:20px;padding:12px 14px 12px 18px;box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.brand svg,.brand .logo{width:38px;height:38px;flex:none;display:block;border-radius:10px}
+.wordmark{font:900 21px/1 var(--f-display);letter-spacing:-.01em;color:#fff}
+header.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:6px 4px 0}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;background:rgba(255,255,255,.08);padding:4px;border-radius:14px}
+.tab{appearance:none;border:none;background:transparent;color:#d4e2f2;padding:9px 15px;border-radius:11px;font:700 14px var(--f-body);cursor:pointer;transition:background .15s,color .15s}
+.tab:hover{background:rgba(255,255,255,.1);color:#fff}
+.tab[aria-selected="true"]{box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.tab[aria-selected="true"].old{background:#8b6cc0;color:#fff}
+.tab[aria-selected="true"].new{background:#0072bc;color:#fff}
+.tab[aria-selected="true"].int{background:#00866f;color:#fff}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tab:focus-visible{outline-color:var(--sun)}
+
+/* queue */
+.queue{display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding-inline:4px}
+.queue:empty{display:none}
+.queue .kicker{margin-right:4px}
+.qi{appearance:none;cursor:pointer;font:500 12.5px var(--f-mono);border:1px solid var(--rule);background:var(--sheet);border-radius:999px;padding:5px 12px;color:var(--ink-2);transition:border-color .15s,background .15s;box-shadow:var(--shadow-sm)}
+.qi:hover{border-color:var(--accent)}
+.qi.cur{border-color:var(--accent);background:var(--accent);color:var(--on-accent)}
+.qi.done{background:var(--ok-soft);color:var(--ok);border-color:transparent;box-shadow:none}
+.qi.done::before{content:"✓ ";font-weight:700}
+.qi.done.cur{background:var(--ok);color:var(--on-accent)}
+
+/* surfaces */
+.panel{background:var(--sheet);border:1px solid var(--rule-2);border-radius:20px;padding:22px clamp(16px,2.4vw,28px);display:flex;flex-direction:column;gap:16px;min-width:0;box-shadow:var(--shadow)}
+.casehead{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:flex-start}
+.badge{display:inline-flex;align-items:center;gap:7px;font:700 12px var(--f-body);letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85}
+.b-full{background:var(--accent);color:var(--on-accent)}
+.b-lite{background:var(--lite-soft);color:var(--ink);border:1px solid var(--rule)}
+.b-lite::before{background:var(--lite)}
+.b-old{background:var(--old-soft);color:var(--old)}
+.triggers{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:5px 11px;border-radius:999px;border:1px solid #f3d8a0;background:#fff6df;color:#7a5200}
+.chip::before{content:"!";display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:#e8a400;color:#fff;font-size:10.5px;font-weight:900}
+.chip.w{border-color:transparent;color:var(--warn);background:var(--warn-soft)}
+.chip.w::before{background:var(--warn)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip:not(.w){background:#33290f;border-color:#5a4718;color:#f4cf73}}
+:root[data-theme="dark"] .chip:not(.w){background:#33290f;border-color:#5a4718;color:#f4cf73}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px}
+.fact{background:var(--paper);border-radius:14px;padding:10px 14px;font-size:15px;font-weight:700}
+.fact b{display:block;font-size:11px;font-weight:700;color:var(--ink-2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px}
+.step{border:1px solid var(--rule);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;background:var(--sheet)}
+.step.locked{opacity:.45;pointer-events:none}
+.step.key{border:1.5px solid var(--accent);box-shadow:0 0 0 4px var(--accent-soft);background:linear-gradient(180deg,var(--accent-soft) 0,var(--sheet) 64px)}
+.step-h{display:flex;gap:11px;align-items:center}
+.step-n{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:900 14.5px/1 var(--f-display)}
+.lite .step-n{background:var(--lite);color:#fff}
+.old .step-n{background:var(--old);color:#fff}
+.int .step-n{background:var(--ok);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lite .step-n,:root:not([data-theme="light"]) .old .step-n,:root:not([data-theme="light"]) .int .step-n{color:var(--on-accent)}}
+:root[data-theme="dark"] .lite .step-n,:root[data-theme="dark"] .old .step-n,:root[data-theme="dark"] .int .step-n{color:var(--on-accent)}
+
+/* table */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:9px 14px;border-top:1px solid var(--rule-2);vertical-align:middle}
+th{font:700 11px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-top:none;background:var(--paper)}
+tbody tr:hover td{background:color-mix(in srgb,var(--accent-soft) 45%,transparent)}
+td:first-child{font-weight:700}
+td.mono{white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.flag td,tr.flag:hover td{background:var(--warn-soft)}
+tr.flag td:first-child{box-shadow:inset 4px 0 0 var(--warn)}
+.pts{display:inline-block;height:8px;background:var(--accent);border-radius:999px;vertical-align:middle;margin-right:8px;opacity:.85}
+td label.small{display:inline-flex;gap:6px;align-items:center;cursor:pointer;color:var(--ink-2)}
+input[type=checkbox],input[type=radio]{accent-color:var(--accent);width:16px;height:16px;margin:0}
+
+.note{background:var(--paper);border-left:4px solid var(--accent);padding:12px 16px;border-radius:4px 14px 14px 4px;font-size:15.5px;line-height:1.6}
+.old .note{border-left-color:var(--old)}
+.perc{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:14.5px}
+.pill{font:700 12.5px var(--f-body);padding:5px 12px;border-radius:999px}
+.p-under{background:var(--warn-soft);color:var(--warn)}.p-ok{background:var(--ok-soft);color:var(--ok)}.p-over{background:var(--accent-soft);color:var(--accent-strong)}
+details summary{cursor:pointer;color:var(--accent-strong);font-weight:700;width:max-content;max-width:100%}
+
+/* controls */
+.choices{display:flex;gap:8px;flex-wrap:wrap}
+.choice{appearance:none;border:1.5px solid var(--rule);background:var(--sheet);color:var(--ink);padding:10px 18px;border-radius:12px;font:700 15px var(--f-body);cursor:pointer;transition:border-color .15s,background .15s}
+.choice:hover{border-color:var(--accent)}
+.choice[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent);box-shadow:0 2px 8px color-mix(in srgb,var(--accent) 35%,transparent)}
+.old .choice:hover{border-color:var(--old)}
+.old .choice[aria-pressed="true"]{background:var(--old);border-color:var(--old);color:#fff;box-shadow:none}
+.btn{appearance:none;border:none;background:var(--accent);color:var(--on-accent);padding:11px 20px;border-radius:12px;font:700 15px var(--f-body);cursor:pointer;transition:background .15s,transform .05s;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.btn:hover:not(:disabled){background:var(--accent-strong)}
+.btn:active:not(:disabled){transform:translateY(1px)}
+.btn.sec{background:var(--sheet);color:var(--ink);border:1.5px solid var(--rule);box-shadow:none}
+.btn.sec:hover:not(:disabled){background:var(--paper);border-color:var(--accent)}
+.btn.old{background:var(--old);color:#fff}
+.btn.old:hover:not(:disabled){background:var(--old);filter:brightness(.92)}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.anchors{display:flex;flex-wrap:wrap;gap:6px}
+.anchor{display:flex;gap:7px;align-items:center;font-size:13.5px;background:var(--sheet);border:1.5px solid var(--rule);border-radius:999px;padding:5px 12px;cursor:pointer;transition:border-color .15s,background .15s}
+.anchor:hover{border-color:var(--accent)}
+.anchor:has(input:checked){background:var(--accent-soft);border-color:var(--accent);color:var(--accent-strong);font-weight:700}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.two>*{min-width:0}
+.box{background:var(--paper);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.box .big{font:900 28px/1.15 var(--f-display);font-variant-numeric:tabular-nums;color:var(--ink)}
+.outcome{font:900 21px var(--f-display);padding:2px 12px;border-radius:999px;display:inline-block}
+.o-in{color:var(--ok);background:var(--ok-soft)}.o-wl{color:var(--warn);background:var(--warn-soft)}.o-ex{color:var(--ink-2);background:var(--lite-soft)}
+.warnbox{background:var(--warn-soft);border-left:4px solid var(--warn);padding:12px 16px;border-radius:4px 14px 14px 4px;font-size:14.5px}
+.warnbox b{color:var(--warn)}
+.oldreason{font-size:14.5px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.oldreason>div{background:var(--old-soft);border-radius:12px;padding:10px 14px}
+.oldreason>div:last-child{grid-column:1/-1;background:var(--sheet);border:1.5px solid var(--old)}
+.oldreason b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--old);margin-bottom:2px}
+.stmt{background:var(--old-soft);border-radius:16px;padding:14px 18px;font-size:13.5px;display:flex;flex-direction:column;gap:8px}
+.answer{border:2px solid var(--old);background:linear-gradient(135deg,var(--old-soft),var(--sheet));border-radius:18px;padding:16px 20px;display:flex;gap:32px;flex-wrap:wrap;align-items:baseline}
+.answer .big{font:900 30px/1.15 var(--f-display);font-variant-numeric:tabular-nums}
+.rate{display:flex;gap:8px;flex-wrap:wrap}
+.rate button{width:48px;height:44px;padding:0;border-radius:50%}
+textarea{width:100%;min-height:130px;font:15px/1.55 var(--f-body);background:var(--sheet);color:var(--ink);border:1.5px solid var(--rule);border-radius:14px;padding:12px 14px;resize:vertical}
+textarea:focus{border-color:var(--accent)}
+select{font:15px var(--f-body);background:var(--sheet);color:var(--ink);border:1.5px solid var(--rule);border-radius:10px;padding:7px 10px;max-width:100%}
+.toast{font-size:14px;font-weight:700;color:var(--ok);background:var(--ok-soft);padding:9px 14px;border-radius:12px;align-self:center}
+.toast::before{content:"✓ "}
+
+/* interviewer */
+.iv-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.iv-grid{grid-template-columns:1fr}}
+.qrow{display:grid;grid-template-columns:minmax(0,180px) 1fr;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--rule-2)}
+.qrow>span:first-child{font-weight:700;font-size:14.5px}
+.step-h+.qrow{border-top:none}
+@media (max-width:560px){.qrow{grid-template-columns:1fr;gap:6px}}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg label{font-size:13.5px;border:1.5px solid var(--rule);background:var(--sheet);border-radius:999px;padding:5px 12px;cursor:pointer;display:flex;gap:6px;align-items:center;transition:border-color .15s,background .15s}
+.seg label:hover{border-color:var(--ok)}
+.seg label:has(input:checked){background:var(--ok-soft);border-color:var(--ok);color:var(--ok);font-weight:700}
+.seg label:has(input:disabled){cursor:default}
+.seg input{accent-color:var(--ok)}
+.int input[type=checkbox]{accent-color:var(--ok)}
+.int .step>label.small{display:flex;gap:8px;align-items:center;cursor:pointer;padding:3px 0}
+.int .step.key{border-color:var(--ok);box-shadow:0 0 0 4px var(--ok-soft);background:linear-gradient(180deg,var(--ok-soft) 0,var(--sheet) 64px)}
+.int .btn:not(.sec){background:var(--ok)}
+.int .btn:not(.sec):hover:not(:disabled){background:var(--ok);filter:brightness(.92)}
+.live{position:sticky;top:12px;display:flex;flex-direction:column;gap:12px}
+.live .panel{padding:18px 18px;gap:10px;border-radius:18px}
+.chk{border-left:4px solid var(--warn);background:var(--warn-soft);border-radius:4px 12px 12px 4px;padding:10px 14px;font-size:14px}
+.chk.ok{border-color:var(--ok);background:var(--ok-soft)}
+.locked-score{border:2px solid var(--ok);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,var(--ok-soft) 0,var(--sheet) 80px)}
+
+/* ---- contrast & hierarchy pass ---- */
+.panel{border:1px solid var(--rule)}
+section.panel:not(.lite):not(.old):not(.int){border-top:5px solid var(--accent)}
+section.panel.lite{border-top:5px solid var(--lite)}
+section.panel.old{border-top:5px solid var(--old)}
+section.panel.int{border-top:5px solid var(--ok)}
+.live .panel{border-top:1px solid var(--rule)}
+.fact{border:1px solid var(--rule-2)}
+.panel>.step+.step,.panel>.step+.stmt,.panel>.stmt+.answer,.panel>.answer+.step{margin-top:6px}
+/* every step gets a header strip: input steps neutral */
+.step{border:1px solid var(--rule);padding:16px 20px 18px;gap:14px;box-shadow:var(--shadow-sm)}
+.step>.step-h:first-child{margin:-16px -20px 2px;padding:12px 20px;background:var(--hdr);border-bottom:1px solid var(--rule);border-radius:15px 15px 0 0}
+.step h3{font-size:17px;font-weight:900}
+/* decision steps: solid coloured header */
+.step.key{border:2px solid var(--accent);box-shadow:0 0 0 5px var(--accent-soft),var(--shadow);background:var(--sheet)}
+.step.key>.step-h:first-child{background:var(--accent);border-bottom:none;margin:-16px -20px 4px;border-radius:13px 13px 0 0}
+.step.key>.step-h h3{color:var(--on-accent)}
+.step.key>.step-h .step-n{background:var(--on-accent);color:var(--accent)}
+.int .step.key{border-color:var(--ok);box-shadow:0 0 0 5px var(--ok-soft),var(--shadow);background:var(--sheet)}
+.int .step.key>.step-h:first-child{background:var(--ok)}
+.int .step.key>.step-h .step-n{color:var(--ok)}
+/* result step (calculated outcome): dark header */
+.step:has(.outcome){border:2px solid var(--strong)}
+.step:has(.outcome)>.step-h:first-child{background:var(--strong);border-bottom:none;border-radius:13px 13px 0 0}
+.step:has(.outcome)>.step-h h3{color:#fff}
+.step:has(.outcome)>.step-h .step-n{background:#fff;color:var(--strong)}
+.step:has(.outcome)>p{font-size:16px;padding:10px 14px;background:var(--hdr);border-radius:12px}
+/* confirm step: green */
+.step:has(#confirm-agree){border:2px solid var(--ok)}
+.step:has(#confirm-agree)>.step-h:first-child{background:var(--ok);border-bottom:none;border-radius:13px 13px 0 0}
+.step:has(#confirm-agree)>.step-h h3{color:var(--on-accent)}
+.step:has(#confirm-agree)>.step-h .step-n{background:var(--on-accent);color:var(--ok)}
+.step:has(#confirm-agree) .btn{background:var(--ok)}
+/* escalate notice (light track mismatch) */
+.step:has(#escalate){border:2px solid var(--warn);background:var(--warn-soft)}
+/* old mode: the human-judgement steps */
+.old .step:has([data-rate]),.old .step:has(#acc){border:2px solid var(--old)}
+.old .step:has([data-rate])>.step-h:first-child,.old .step:has(#acc)>.step-h:first-child{background:var(--old);border-bottom:none;border-radius:13px 13px 0 0}
+.old .step:has([data-rate])>.step-h h3,.old .step:has(#acc)>.step-h h3{color:#fff}
+.old .step:has([data-rate])>.step-h .step-n,.old .step:has(#acc)>.step-h .step-n{background:#fff;color:var(--old)}
+.answer{box-shadow:var(--shadow)}
+/* interviewer result */
+.locked-score{border-width:2px;box-shadow:0 0 0 5px var(--ok-soft),var(--shadow);background:var(--sheet)}
+.locked-score>.kicker:first-child{margin:-16px -18px 4px;padding:12px 18px;background:var(--ok);color:var(--on-accent)!important;border-radius:15px 15px 0 0;font-size:12.5px}
+/* boxes and choices */
+.box{border:1px solid var(--rule-2)}
+.choice{border-color:var(--rule);border-width:2px}
+.chip:not(.w){border-width:1.5px}
+th{background:var(--hdr);color:var(--ink-2)}
+.muted,.small.muted{color:var(--ink-2)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .step:has(.outcome)>.step-h h3,:root:not([data-theme="light"]) .old .step:has([data-rate])>.step-h h3,:root:not([data-theme="light"]) .old .step:has(#acc)>.step-h h3{color:#fff}
+ :root:not([data-theme="light"]) .old .step:has([data-rate])>.step-h:first-child,:root:not([data-theme="light"]) .old .step:has(#acc)>.step-h:first-child{background:#5d4690}}
+:root[data-theme="dark"] .old .step:has([data-rate])>.step-h:first-child,:root[data-theme="dark"] .old .step:has(#acc)>.step-h:first-child{background:#5d4690}
+
+/* ---- monochrome page background ---- */
+:root{--page:#0072bc;--page-ink:#ffffff;--page-ink-2:#d5e8f7}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--page:#050c16;--page-ink:#f0f5fb;--page-ink-2:#9fb3c8}}
+:root[data-theme="dark"]{--page:#050c16;--page-ink:#f0f5fb;--page-ink-2:#9fb3c8}
+body{background:var(--page)}
+.appbar{background:var(--strong);box-shadow:0 8px 24px rgba(0,20,50,.25)}
+header.top h1{color:var(--page-ink)}
+header.top .kicker,.queue .kicker{color:var(--page-ink-2)}
+.qi{border-color:transparent;box-shadow:0 1px 3px rgba(0,20,50,.2)}
+.qi.cur{background:var(--strong);color:#fff;border-color:#fff;box-shadow:0 0 0 2px var(--page),0 0 0 4px #fff}
+.qi.done{background:var(--ok-soft);color:var(--ok)}
+.qi.done.cur{background:var(--ok);color:#fff}
+main>.panel{box-shadow:0 12px 36px rgba(0,20,50,.3);border-color:transparent}
+.live .panel{box-shadow:0 8px 24px rgba(0,20,50,.25);border-color:transparent}
+
+/* ---- button roles ---- */
+/* 1. primary action: solid, larger, arrow */
+.btn:not(.sec){padding:13px 24px;font-size:15.5px;font-weight:900;border-radius:12px;box-shadow:0 3px 0 color-mix(in srgb,var(--ink) 35%,transparent);letter-spacing:.01em}
+.btn:not(.sec)::after{content:"→";margin-left:10px;display:inline-block;transition:transform .15s}
+.btn:not(.sec):hover:not(:disabled)::after{transform:translateX(3px)}
+.btn:not(.sec):disabled{box-shadow:none}
+.btn:not(.sec):disabled::after{content:none}
+/* 2. secondary action: ghost, no fill */
+.btn.sec{background:transparent;border:1.5px solid var(--rule);color:var(--ink-2);font-weight:700;padding:9px 16px;border-radius:999px;font-size:14px}
+.btn.sec:hover:not(:disabled){background:var(--hdr);color:var(--ink);border-color:var(--ink-2)}
+/* 3. escalation: "To review → full track" */
+#raise{border:1.5px dashed var(--warn);color:var(--warn);background:var(--warn-soft)}
+#raise:hover{background:var(--warn-soft);color:var(--warn);border-style:solid}
+/* 4. options to choose from: radio cards, never solid */
+.choices:has(.choice){gap:10px}
+.choice{display:inline-flex;align-items:center;gap:10px;min-width:150px;padding:13px 18px 13px 14px;border-radius:12px;border:2px solid var(--rule);background:var(--sheet);font-size:15.5px;box-shadow:none}
+.choice::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--rule);background:var(--sheet);transition:border-color .15s,box-shadow .15s}
+.choice:hover{border-color:var(--accent)}
+.choice[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent-strong);border-color:var(--accent);box-shadow:none}
+.choice[aria-pressed="true"]::before{border-color:var(--accent);box-shadow:inset 0 0 0 4px var(--sheet);background:var(--accent)}
+.old .choice[aria-pressed="true"]{background:var(--old-soft);color:var(--old);border-color:var(--old)}
+.old .choice[aria-pressed="true"]::before{border-color:var(--old);background:var(--old)}
+/* rating scale: numbered circles */
+.rate .choice{min-width:0;width:46px;height:46px;padding:0;justify-content:center;border-radius:50%}
+.rate .choice::before{content:none}
+.old .rate .choice[aria-pressed="true"]{background:var(--old);color:#fff;border-color:var(--old)}
+</style>
+
+<div class="wrap">
+  <nav class="appbar" aria-label="Cashy">
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAE81JREFUeF7tHQl0VNX1/sk6M4FAAoQgS4KU3YJsIoQtYsEolWJDFQIRKOJCtS7Yim1BW60VtLWtICAgkEgNIEUhiEFCyiYoKrIJIWwBskAStpksQ+b33o/BhMyf/Hl/nfHfc3KS/P+2u/z73rvv3vs4UAHCJ7yfaLG4E4Dn2gAHMcBDM/wdC8C34ICzqdBlwDTJA+8E4IqRZgVIswv4uwg4Pt/ttmyvWDFui9KIcko1aJuQnoQDnYSDTjKZrBRV67YjCAcPmfh0iXN5ykYlepEnAMkZVqvNNRUbeQ5/2igxILMNaRTgAfJ5np9TXh76LqwaWy6tVv1SbAKQnBFqtVZNw8ovcByHqt0EvSiAQkBTxStOZ+giFIQqX8fhowDwnDV15RgLz7+KnXb0tTOzvIoU4PkjvMXye+d7D63DNQQqCGkgXQCSM4LsVtdryPjnpDVtltKDAm7gXy93hs5EbVAtpX9pAjAlI8rucq1C5idKadQsozMFeNjsCI4YA0vuv9LQSBoUANvkla246uosVCtdG2rMfG8oChx08yEjypePPettVBZvL20pK3rBteo9JvO9Ucmw77pxUPV56Pg0rx+uuAZAtW+75tqDBW41LIrmwBqmAM8fcISEDoHFY0s9FfasAZIzImwu10aT+Z5I5mfPOK478RLuyQzzNHKPAmCzVs3lOOjnqYL5zP8oQLy0NS99y9PI6wmAbULao2jcmeapsPnMfylAPCXe3oxB3TUAWvhsVtdRlJh2Nxc0//d/CqB16KSzuGln2JhUWYNNHQ1gt1Y9YzLf/xkthgF+7XH25qVP137/gwYYn9bYHsydxpeRYg2YzwOCApcc1/i2kJ5ymbC5oQGsQdxMk/kBweCGkIj8ntdCuesaYGh2sK3tuTJU/xEN1TbfBwIF+CuOMEc0LJzmEjSALa7gPpP5gcBYqThwjWxVje6l0oIAcG73g1KrmuUCgwI1PL++BuC4kYGBlomFZApwMEL4+K0Pp/W38NwuyRXNggFDATfH32mx8DAsYDAyEfGJAsT7YJ6HTrgADEiIbx4BHVs1hi6tIqFlEys0axQGzRuHX//dKBwibSGQX+KAwksVUFDmhCL8XXixAn+Xw5kSJ+w6dj4g6VKDFPE+GF244wIBy/CQIBjdtw3ccWsz6HJLJHRCpttCgxpErU20HegHILpe2QpXNXyeex6yDxZBzneFcPisYDsJGCDec7bU9DxUAO39FauETi3goYHxkNTzFkkMl4Pn+SuVkHO4CDbtOwubvj0HlS63nOZ0r4tnA8c5e2p6IY4kRvfR+DCAtvjFjkuIg+Q72kHrKPp6tYfzlytgwWe5sDTnGFytuKb9AJTpsYg0QAVqAI/OAsr0oVwrNIe/lNwTftmvrXKNymzpktMlCMHCLblQghrCnwA1QCVpAMk+5HohFxzEwaN3dYKnk7pARHiwXsPw2m95VTWkbT8Ob396BAouMgfqeO1DjZeGFwCa499M6Q3tcEXvD0ALx1mr98F7OXn+MFwwrABYcG/66oO3w6Qh/umTmrW/AJ5YuhtoijAy1HMJM8Jgm9pDYe0zQ/yW+UTDu2+LhW2zRkCv+CgjkFR0DIYTgE6xjWHLH+6G/j9pLjpof3kRE2mFj58bBqN6tTbskA0lAPTVbHphOLRqGjg5JIKDLLBoan8YY6CdS21pNIwA0Fey4vGBYJVgvTPs5yQyMPTIhXmT+kHqYOPZ2wwhAAmdmsM7U+4AIlSgAuH2+rje8NTILoZCUXcB6IyHNcsfTwBSlT8GmDm6O/w5uYdhUNXVqkKHMKufGgL2MPWGcazoCuw7VQb7T5fBgTMXoeRqJVxyuOBSeZVgwm3XLAJaRobjaWE4xDaxCaeHiV1bQmxTq2pMeuSujpBXfNUQtgLd7AC01dvwu0S4tUUjxQlNDP9wz2lY8+VpOI9HvCxA4xqIUxMZou7vo076o8Evb4Ij5/Q9YdRNAFb/dggM6tyChTeidRZsPgortp+A3EJliUq+BE+N7AyTh3YQ7ZvlBWmn4a9kAZmR9YKg0J4PzNa684cGxME0VINKwSd4PDvu3zvgv1/mQymqeKWBporPDhSirf8EHjkHQ892TRXpIioiDG7BLW/mN15zOCjSl1gjmmsAOtHb9fI90NgaIjYmyc/pS5+Rvhd25V6QXEeJgj9t2wTmT+4PHVoqM31Nf28PrPr8lBJD87kNzZfef0X7vhLMX7X7FCTM3qQ584nC356+CANnfwL/2HjYZ4J7qvC3h3oJ7ml6gKYCMLx7S/h5b/kLqrc+OQzTl2LmGp3hr+sOwPh/b0PPIHlzOO2CxvTTJyBbsynAFhYEe/6cJDhlyoE56w/C3PWH5DSheN0BHZvD+9MHybJiHsQtauJfMBcXAq2PErvFwO1x0bhAvAa7j12ADV+fgXV7zyg+ds0E4Nl7u8Lzo7rJQmA1qv0nDPDle0KiT/toyHhyMNgZHVaqrrmh+/MfoUW0PzK/pacu4GD+RUh9Z6fgyawUaDIFBFk42Ue7Ww4Wwm9wsWRU+PJ4CTzyLnt8TQn6GK59Zqgo8wnvbm1o8als5h5NBOC+22+Rpfq/OlEKD7+zA9wGd17bjFvFRegbyAJ2XAR2a92kwap90e19wiDlDpU0EYApiT9pEDGxAqQapy7a5Tcu2C+t2YfxA5fE0BF93jhc+i6AFtNKgeoC0LV1pBCswQqvfXQAzpTiHQp+Aq5qHqYs2AWOSvVcxXvH1w9iYSWP6gIwdRj713+k4DLMzzrCiptu9fKKr0DK29sxyao6gSOV1+RtO2sTRlUBoOP9+2Xs+/+0ap/h530xKdt59DwuCj8HtwoLl2OFDeaAFhtWveeqCkBXXNSwbosoDm/rIQpa8l/Y8PVZ6PNiJsxGN/HdedfN1XSucEbmNo7OJJQC9Q7icYQDZDh2zsv6TikcdW3nLEYdz8dTSvoh+AUeLc9H7ydWyMbt8MdfKWcQUlUD9O/AtvijuLs1eJ4faEBOr29PZnd9O3X+Kjy2ZLeiZFFVAAaiMwULrP0iH6pVmDtZxqJUHbIULpk2AMgoxgKFGG42+s2tUObw+Vogr92pJgAdYxsBef2wwLYjxSzVDFunK+Yr+ODJQRAazEZu8nH4BTL/XJnyMYdsI5JA6o6xbAlH8RYs2P5dkYQe/KNI+xYRsObpIRjUKt3QUxuzqxUueODvOXAcfQjVANUEIDqC7evfi2Zfp44uUkoSuRU6lpJ9nzx/WICsoL/65zY4xGBZlNqfagIQZWc79t12JDC+fpr+/ovMJ39CFqA10OQFO4EOmdQE1baB0Y3YNEBugXJGjoYIRxlGRvZoBbRAIyBib0T/vNUydyCUw2AVurvLCWl/Ek8+KcJYbVBNAFjV3uVy9WzoNcQkp5T5uB272Sv5PgxPo5+x/ePgN8u/gCKGRA9hIRZIm54At6HfICvM/OBr2UIotW/VpoBmjPPeFQzYUBuWPHJnPebX7nNI1xjYMGOYECziC9AOb/ljA+HODuyRzXM3HITF2cd86VZWWdUEIBq9f1ngcrm6CRXIJb2fBAMVRS2tn5GI0ULS5/B/TboDhmJUESsQ4+d8rK27m2oCgLs5JrAwGkqkduaLUyoJwccSNcHr43rJSl714RengVS/1qCaALAGaETZ2TSHVMLVLPiklq/RBN6mgxmjumLoN3sqGzr0ekJhE69U/FQTgBJGk2VTO5vBRCrCFQw2Bm9CMBHds567l93Z9Qs8JZw4Tz93N9UEoPQKW1BmU8bFo1QB2J9fJrVonXKehIBO9kj1swK5gpOhpxINPnqBagJQhiHYLNAhRplwK7G+l29jP0v/QQisQhIouSd7ZOJV03VMjAa1n6tmByhxsAVp9pPhPygFYQokzdp/DhnYSkrxemVICD753V3QFE3drCd7ZF8Y/WaO4id79QYr4YFqGoB1CrgNfd/D0ZiiJjyTthdOy/DKoeQRlJ2cBUpxbTQGv/xz6ChiBFCN0kcZY/RpG9g7ns2RRCpBizFpxKg5WxSNsJHSt3Cyh8e6lBfAKKCaAJBPH6vzQt9blXN7FiM0XQxxn4ZCoMXJnhiu3p6rJgDU6Q5Gxw46pNECSAhGzcnWRBNMWbhL9ZM9FpqpKwDoGs0ClHhhmEiAJEt73upQZm81NQE5uDyK7uGf4gUTRgTVdgGE7M6j7K5dj9/dEa9q0cYtvGY6INs/rfKVhBc/+AZsGP9PXkF0jY0VF4/HcQ2QdaAAlv4vjzmJlVJjVD08/MCcn0NzxoOh4a9mYXq3i0rh2mA7ZO5VUgg+2puP0b6xonccUHKoRxfvBtqa6gWqTgGE1EeYuIkVXsbbQbQEJReGpPLp4MnbBReUFnfZYwMUjfb1lV6qCwBruDQhQoElkxROzdYQgZQQAvLk8cUlngS9EWNiiYbwaei96gJwAoMZKLkDK8wa81O8GErb7OFyhOB/eKtY22Z2n7Kf0vV2D2i087mZD6oLAHVIt2uxAqnJd9GDh9XyxtovixDQyd6pC06gOw98hQd0ShKliQDQefdJ1ASscHtcFCyedidmE2dtga2eL0JAJ3s03U0YFM/UGasTLVNntSppIgDUnxwtQPWHd4+FOZhuXWsgIbgXjUU5h8Td1endGxsOw1up7Pl7rMFsZwty6aFZqlj6QkjNNbGxuYsToj0wRWvVNV5Im6YlODCkmxJTnsToHDoBjESvpct4GRSFsP0j87DwewlqqDDGAyLChfIgUR9ag+p2gNoIUT49ipSRC3Q331/W7sfkEYyOh3IHUKs+3XRCl13Ive9Ar3Sxmk0BRDPKmqFETtwnftYJ1uCtYpR3WC8g///Zv+whLFDlMp9C4TIxmYQeoKkAEIJ/XPUN3qUn3/efbAQ5fxoBKQlsiy45xKZk0Tl/HAGPDVcm4/nM/3ylm2eQ5gJAR8R0s6YSQBrgjZQ+wjVzvXCnoDbQpdXkBkY3m8Vj1K8SsA4tpSt3nlSiKaY2NF0D1B4hHY7QbRxKwnZcjNGVrUqmUKHxUU5/SnP7IAaVKAmnLlyFoS9/qms0tG4CQNGz659PBDWcQMnnLm3HCVmnbfF4V3EC3mgyGH98CSbxRUAS8bYQyv+rJ+gmAIQ0qdTM39/FfFoohXA1l0YdwFPF/WfK6l0aFYeMjsFgUfLza4k3fWpxaRSN+4X/fA1LtmoXAyhGK10FgAZFTqDr8HpVNW8OE0Ner+cUA6hHGJgnfDVfBN48iP2UAn3+joBLCnUznjX/z8PMp0ZhPo1JdwGgQWz7rhh+i/H4gQ7E/JfWfGsoNFV1CfMF0wy8NImuXvnXw/1kmVR96VPLshT3r3XotxT8DKEBagZKV6KMfO0zwwRNSCGglDKUKtaIzKexG0oAaECUEYvuztmrcnIkKYyTW+bClUqYMG/7jTSxcttTo77hBICQJGvhqLnZhtgmsRJ9075zMHDWRnQHVz/RE+sYqZ7u28CGBk/Wwld+1RM6o0u1PwDF/s1c+RWsleEMqyWehhcAQUrRE2hCQnvBHCv32jm1iHsRD7jezc6Fhej+dgl9BfwFOFtqegXSV79zVR8oRS7WTyd1ganDOuJOwRizF83z5ApGzKe7APwJ0JuikjQAuezG+NPAozGLyNj+7YTDGb2mBoownp91FJbkHIMKmTeH6kj7ItIAeagB2us4CFld946PQkGIhzF923oNwpDVyfeVSzBrN90ivgXDujIxmqfSpV9qFyXwQQ1wnLNPTN8KHAxRokE92yC38VG9Wwt5+kgo6DRPCSBfvc3I8Gz0bKa/Awp4yOFsE9Pe4zguNaAQQ2Si8Li5F+YA7tM+Cnq0jcL/w8CK9xfTOsIaGiy8JziON3zllziFXPxnSh1wFq+oo/8L8H+6/SuQASOXFwTjCtv/7mWTwBXajm3GEC36McEzBXgOci1uDrI9vzafBjwFONghxNrYU9MweR7Hnt464CkVkAheciwb36RmM/1pQKJoIuWFAvwmeikIAM9ZVnopab4KQArU8FwQAGfolQ0oBoG95A1AJrKihAFVV50nY9dT/etTwMJpLjfPzWNt0KznXxRAA9DbsHWYYLe+YVAvr+Zfxf99v/jev3A3R4s8/p7XAi1+OFFJT7mM08DfTAoFOgWQxwKvr0OdIzVHcdSbqB5OBjoJfqz44dx/yuEMfaM2/nUEADYmVfLAzfyxEijQ8eY57llYNbZOZG5dAUAKlC8bt5JsxIFOjB8bfsRT5O2am/EWLIGewDYxfTeeE7DnPPHUqPlMJwrw2xzLUgZ76ryeBqgp5AwJuQfXA3meKpnP/IcCxENHcOhosRGLCgAsHltaDUEjsAFjZjkWw8h8foMCxDviIfFSjCziAoA1Kpc9mMfzITQNHBRrwHxuVArwhzCjVV/iobcRiq4B6lRKzoi0W10foudQorfGzHcGoQAPWxzlIWNwxd+gYc+rBriBDjbkaJ97Nw/8OwZB0RyGGAV4mIvM/5kU5lMT0jRArc5sD78/mnOjNYkDZTIkiSFiPveNAjwcxQ/0WefyFOGQRyr4LAA1DVsnpk/nOP5FDjj225KljtIsJ0oBZDq69XOznMvGLxQt5OUFswAIbSZnWK3Wql+jU+kMbKiNl37MVwpTAFf4+fgzt9wZsgjVfTlr8/IEoFav6F18D/47GaeGJNQK2uZ3Z8Xez+rh1+4EHjLRg2epc8X4TCWGr5gA1B5M+IT3Ey0WdwIOtA0KRAwOuhn+jsXTxhamcHhnm8Bk4IqRZgVIswv4uwg4Pt/ttmyvWDFui/favr/9PxXjkLyNzGhuAAAAAElFTkSuQmCC" alt="" width="38" height="38">
+      <span class="wordmark">Cashy</span>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab old" role="tab" id="t-old" aria-selected="false">A · Current Cashy (reconstruction)</button>
+      <button class="tab int" role="tab" id="t-int" aria-selected="false">0 · Interviewer</button>
+      <button class="tab new" role="tab" id="t-new" aria-selected="true">B · Two-track review</button>
+    </div>
+  </nav>
+  <header class="top">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span class="kicker">Cashy Oversight Challenge · prototype</span>
+      <h1>Review workstation</h1>
+    </div>
+  </header>
+  <div class="queue" id="queue"></div>
+  <main id="app"></main>
+</div>
+
+<script>
+(function(){
+// ---------- data ----------
+const FACT=[
+ {k:'Head of household',b:'D',lv:[1.0,1.5996,2.0701,2.7007],lab:['no risk profile','low risk','medium risk','high risk']},
+ {k:'Language',b:'D',lv:[1.0,1.5256,2.0511],lab:['no barrier','partial barrier','strong barrier']},
+ {k:'Specific needs',b:'D',lv:[1.0,1.2492,2.5784,3.2517],lab:['none','mild','severe','very severe']},
+ {k:'Documents',b:'D',lv:[1.0,1.5641,2.1283],lab:['complete','incomplete','missing']},
+ {k:'Basic needs',b:'N',lv:[1.0,1.776],lab:['met','not met']},
+ {k:'Housing',b:'N',lv:[1.0,1.4989,2.1176,2.8235],lab:['stable','partially stable','precarious','street or night shelter']},
+ {k:'Negative coping',b:'N',lv:[1.0,1.7901,2.5802],lab:['none','moderate','high-risk']},
+ {k:'Dependency',b:'N',lv:[1.0,1.0439,1.7385,2.545],lab:['none','low','medium','high']}
+];
+const gmax=b=>Math.pow(FACT.filter(f=>f.b===b).reduce((p,f)=>p*Math.max(...f.lv),1),.25);
+const GD=gmax('D'),GN=gmax('N'),TARGET=24.4;
+function score(lvIdx){ // lvIdx: level index for each of the 8 factors
+  const v=lvIdx.map((i,j)=>FACT[j].lv[i]);
+  const gm=b=>Math.pow(v.filter((x,j)=>FACT[j].b===b).reduce((p,x)=>p*x,1),.25);
+  const d=50*(gm('D')-1)/(GD-1), n=50*(gm('N')-1)/(GN-1);
+  const contrib=v.map((x,j)=>{const blk=FACT[j].b, tot=v.filter((y,k)=>FACT[k].b===blk).reduce((s,y)=>s+Math.log(y),0);
+    const bs=blk==='D'?d*1.0322:n*0.9678; return tot>0?bs*Math.log(x)/tot:0;});
+  return {final:1.0322*d+0.9678*n,d,n,contrib};
+}
+const band=s=>s<=24.4?'Low':s<=31.2?'Moderate':s<52?'High':'Severe';
+const BANDS=['Low','Moderate','High','Severe'];
+// gap between the interviewer's band and the Scorecard band: >0 = the interviewer thinks the score underestimates
+const gapOf=(guess,lv)=>BANDS.indexOf(guess)-BANDS.indexOf(band(score(lv).final));
+function gapPill(guess,lv){const g=gapOf(guess,lv),sb=band(score(lv).final);
+  const st=g===0?'<span class="pill p-ok">agree</span>':g>0?`<span class="pill p-under">${g} ${g===1?'band':'bands'} more severe: the score underestimates</span>`:`<span class="pill p-over">${-g} ${g===-1?'band':'bands'} less severe: the score overestimates</span>`;
+  return `<span class="small muted">Interviewer's estimate, before the score:</span> <b>${guess}</b> <span class="small muted">· Scorecard:</span> <b>${sb}</b> ${st}`;}
+const MONTHS={
+ '2023-12':{lab:'December 2023',k:44,scores:null},
+ '2024-01':{lab:'January 2024',k:68,scores:null},
+ '2024-06':{lab:'June 2024',k:4,scores:null}};
+MONTHS['2023-12'].scores=[58.87, 58.08, 55.05, 53.45, 52.85, 52.21, 49.54, 48.37, 46.8, 46.2, 46.2, 43.69, 42.98, 41.1, 41.07, 41.07, 41.07, 41.07, 41.07, 40.87, 40.36, 39.81, 39.5, 38.72, 38.72, 38.55, 37.91, 37.88, 37.17, 36.32, 34.72, 34.61, 34.61, 34.61, 34.11, 34.11, 34.11, 33.77, 33.2, 32.91, 32.17, 31.51, 31.37, 31.09, 31.09, 31.09, 31.09, 29.54, 29.54, 28.0, 27.52, 27.09, 26.92, 26.53, 25.35, 25.35, 25.35, 23.52, 21.78, 21.4, 21.18, 21.18, 20.53, 19.09, 19.01, 18.97, 17.75, 16.56, 16.56, 16.56, 16.56, 16.56, 16.56, 16.56, 14.23, 14.03, 13.71, 13.71, 13.61, 12.96, 11.63, 11.63, 9.75, 9.7, 9.27, 9.26, 9.26, 9.26, 9.22, 7.55, 7.29, 7.15, 5.87, 5.43, 3.69, 3.69, 0.0, 0.0, 0.0, 0.0, 0.0];
+MONTHS['2024-01'].scores=[63.81, 62.55, 62.5, 57.73, 56.24, 52.74, 49.83, 47.44, 47.0, 47.0, 46.03, 45.25, 45.22, 43.92, 43.69, 43.26, 43.15, 42.98, 42.96, 42.83, 41.07, 41.07, 41.07, 40.87, 40.45, 39.81, 39.51, 39.5, 39.5, 39.34, 39.09, 38.73, 38.72, 37.58, 36.94, 36.45, 36.45, 36.45, 36.32, 36.13, 35.79, 35.47, 35.34, 35.34, 35.26, 35.12, 35.12, 34.95, 34.11, 34.01, 33.67, 33.5, 33.35, 33.33, 33.17, 32.91, 32.26, 31.8, 31.8, 31.8, 31.09, 31.09, 31.09, 31.09, 31.09, 31.09, 31.09, 31.05, 31.05, 30.45, 30.45, 30.45, 29.21, 29.18, 28.88, 28.7, 28.7, 28.7, 28.21, 28.1, 28.0, 27.19, 26.53, 26.48, 25.99, 25.79, 25.79, 25.41, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.16, 24.04, 24.03, 24.01, 23.95, 23.75, 23.48, 23.46, 22.88, 22.07, 21.94, 21.65, 21.46, 21.46, 21.4, 21.39, 21.18, 21.18, 21.18, 21.18, 21.18, 20.89, 20.89, 20.88, 20.66, 20.44, 20.42, 18.45, 17.75, 17.71, 17.48, 17.21, 17.21, 17.11, 16.74, 16.56, 16.56, 16.56, 16.56, 16.56, 16.0, 16.0, 15.58, 15.13, 14.7, 14.46, 13.61, 13.48, 13.48, 11.63, 11.63, 11.63, 11.63, 11.63, 11.63, 11.63, 11.63, 11.63, 11.02, 9.7, 9.04, 5.87, 5.43, 5.43, 5.43, 5.43, 5.35, 3.69, 3.69, 3.69, 3.69, 0.0, 0.0, 0.0, 0.0, 0.0];
+MONTHS['2024-06'].scores=[76.79, 76.79, 58.87, 56.11, 56.11, 55.59, 51.69, 51.54, 50.36, 50.36, 50.11, 49.83, 49.83, 49.83, 48.88, 47.76, 47.65, 47.44, 47.0, 46.54, 46.2, 43.15, 41.49, 41.1, 40.74, 40.36, 40.36, 39.5, 39.09, 39.08, 38.85, 38.72, 38.72, 38.72, 38.72, 36.65, 36.45, 36.32, 36.25, 35.79, 35.47, 34.95, 34.64, 34.61, 34.61, 34.1, 32.91, 32.21, 31.8, 31.8, 31.36, 31.09, 31.09, 31.09, 31.09, 30.73, 30.39, 30.38, 29.78, 29.26, 29.21, 29.17, 28.38, 28.28, 28.0, 28.0, 27.19, 27.19, 27.19, 27.09, 26.58, 26.53, 26.53, 25.99, 25.84, 25.83, 25.76, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.35, 25.04, 24.72, 24.04, 23.52, 23.43, 23.38, 22.35, 21.64, 21.18, 21.18, 21.18, 21.18, 21.18, 21.18, 21.18, 21.15, 21.15, 20.89, 20.89, 20.47, 20.44, 18.41, 16.61, 16.56, 16.56, 16.06, 16.06, 16.0, 13.81, 13.71, 13.71, 13.71, 13.71, 13.61, 12.96, 12.78, 12.78, 11.69, 11.63, 11.63, 10.51, 9.7, 9.62, 9.62, 9.22, 9.22, 7.15, 6.82, 5.68, 5.43, 3.69, 3.69, 3.69, 0.37, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+function rankIn(month,s,orig){const L=MONTHS[month].scores.slice();const ix=L.findIndex(x=>Math.abs(x-orig)<0.02);if(ix>=0)L.splice(ix,1);return 1+L.filter(x=>x>s+1e-9).length;}
+function cutOf(month){const m=MONTHS[month];return m.scores[m.k-1];}
+function outcome(c,lvIdx){
+  const sc=score(lvIdx).final;
+  if(c.adm) return {code:'ex',txt:'Not eligible',why:'negative administrative check ('+c.adm+')',s:sc,rank:null};
+  const r=rankIn(c.month,sc,c.final), k=MONTHS[c.month].k;
+  if(sc<TARGET) return {code:'ex',txt:'Not eligible',why:'below the targeting threshold (need)',s:sc,rank:r};
+  if(r<=k) return {code:'in',txt:'Eligible',why:"ranked within the month's places",s:sc,rank:r};
+  return {code:'wl',txt:'Waiting list',why:"need recognised, but beyond the month's places",s:sc,rank:r};
+}
+function fragile(c,lvIdx){
+  if(c.adm) return [];
+  const base=outcome(c,lvIdx).code, out=[];
+  lvIdx.forEach((i,j)=>[i-1,i+1].forEach(t=>{if(t<0||t>=FACT[j].lv.length)return;const l2=lvIdx.slice();l2[j]=t;const o=outcome(c,l2);
+    if(o.code!==base) out.push(FACT[j].k+' '+(t>i?'one level more severe':'one level less severe')+' → '+o.txt.toLowerCase());}));
+  return out;
+}
+const idx=(f)=>f.map((x,j)=>FACT[j].lv.findIndex(v=>Math.abs(v-x)<1e-3));
+
+const CASES=[
+ {id:'F-0802',month:'2023-12',final:46.2,f:[2.7007,1.0,3.2517,1.0,1.776,2.1176,1.7901,1.0],n:4,spanish:true,head:'man',solo:'no',adm:null,
+  note:"Family of four. The father has a certified disability that prevents him from working. They rent a room without a contract. They eat once a day.",guess:'High',reason:'health',
+  old:{score:46.2,rec:'in'}},
+ {id:'F-0068',month:'2023-12',final:5.87,f:[1.0,1.0,1.0,1.0,1.0,1.0,1.7901,1.0439],n:1,spanish:true,head:'—',solo:'—',adm:null,
+  note:"Single man, works as a day labourer at a market. Has stable housing with acquaintances. Sold some personal belongings last month.",guess:'Low',reason:'—',
+  old:{score:5.9,rec:'ex'}},
+ {id:'F-0805',month:'2024-01',final:31.8,f:[1.0,1.0,1.0,1.0,1.776,2.8235,2.5802,1.0439],n:4,spanish:false,head:'man',solo:'no',adm:null,
+  note:"Family of four. No adult speaks Spanish: they cannot make themselves understood at the clinic or at school. They sleep in a night-only shelter; during the day the children beg with their mother.",guess:'Severe',reason:'language',
+  old:{score:24.1,rec:'ex'}},
+ {id:'F-0033',month:'2024-06',final:47.76,f:[2.0701,1.0,1.0,1.0,1.776,2.8235,2.5802,1.7385],n:2,spanish:false,head:'man',solo:'no',adm:null,
+  note:"Couple, both without work. They have been sleeping on the street for three weeks. Neither speaks Spanish. Serious situation, consistent with the score.",guess:'High',reason:'housing',
+  old:{score:47.8,rec:'ex'}},
+ {id:'F-0733',month:'2023-12',final:41.1,f:[2.0701,2.0511,1.0,1.0,1.776,2.8235,1.7901,1.0439],n:3,spanish:true,head:'woman',solo:'yes',adm:null,
+  recorded:{5:0}, // housing was recorded as "stable" by mistake
+  note:"Single mother with two small children. They sleep in a night shelter: in the morning they must leave and spend the day on the street. They have not been able to cover meals in recent days.",guess:'High',reason:'housing',
+  old:{score:27.2,rec:'ex'}},
+ {id:'F-0270',month:'2023-12',final:41.07,f:[1.0,1.0,2.5784,1.0,1.776,2.8235,2.5802,1.0439],n:3,spanish:true,head:'woman',solo:'yes',adm:'intentions incompatible with the programme',
+  note:"Single mother with two children, one with a chronic illness. She says she intends to continue the journey north as soon as possible and not stay in the city.",guess:'High',reason:'health',
+  old:{score:41.1,rec:'in'}}
+];
+CASES.forEach(c=>{c.trueIdx=idx(c.f);c.recIdx=c.trueIdx.slice();if(c.recorded)Object.entries(c.recorded).forEach(([j,v])=>c.recIdx[+j]=v);
+  c.ref=outcome(c,c.trueIdx);});
+
+function triggers(c){
+  const t=[], o=outcome(c,c.recIdx), s=score(c.recIdx).final;
+  if(fragile(c,c.recIdx).length) t.push({t:'Fragile decision'});
+  if(!c.spanish && c.recIdx[1]===0) t.push({t:'Inconsistent data: nobody speaks Spanish, "no barrier"'});
+  if(c.n===1 && c.recIdx[7]>=2) t.push({t:'Inconsistent data: single person with dependants'});
+  if(gapOf(c.guess,c.recIdx)!==0) t.push({t:'Interviewer disagrees: estimate '+c.guess+', Scorecard '+band(score(c.recIdx).final)});
+  if(c.raise) t.push({t:'"To review" (interviewer)'});
+  if(c.adm) t.push({t:'Negative administrative check'});
+  if(o.code!=='in' && ['High','Severe'].includes(band(s))) t.push({t:'Exclusion in band '+band(s),w:true});
+  return t;
+}
+
+const ADDED=[];
+const list=m=>m==='B'?CASES.concat(ADDED):CASES;
+// ---------- state ----------
+// LOG is the decision record that would feed the oversight monitor (not shown in this prototype)
+const LOG={A:{},B:{},I:[]};
+let mode='B', cur={A:0,B:0}, st=null, t0=0;
+const app=document.getElementById('app'), q=document.getElementById('queue');
+const fmt=x=>x.toFixed(1);
+const lab={in:'Eligible',wl:'Waiting list',ex:'Not eligible'};
+
+function renderQueue(){
+  if(mode==='I'){q.innerHTML='';return;}
+  q.innerHTML='<span class="kicker">Queue</span>'+list(mode).map((c,i)=>`<button class="qi ${LOG[mode][c.id]?'done':''} ${i===cur[mode]?'cur':''}" data-q="${i}" ${i===cur[mode]?'aria-current="true"':''}>${c.id}</button>`).join('');
+  q.querySelectorAll('[data-q]').forEach(el=>el.onclick=()=>{cur[mode]=+el.dataset.q;render();});
+}
+function setMode(m){mode=m;['int','old','new'].forEach(x=>document.getElementById('t-'+x).setAttribute('aria-selected',String({int:'I',old:'A',new:'B'}[x]===m)));render();}
+document.getElementById('t-int').onclick=()=>setMode('I');
+document.getElementById('t-old').onclick=()=>setMode('A');
+document.getElementById('t-new').onclick=()=>setMode('B');
+
+function render(){renderQueue(); if(mode==='I') return renderInterview(); const i=cur[mode]; if(i>=list(mode).length) return renderDone(); st={lv:list(mode)[i].recIdx.slice(),flags:new Set(),pre:null,anchors:new Set(),escalated:false,rating:null,stage:1}; t0=performance.now(); mode==='A'?renderOld():renderNew();}
+
+function header(c,extra){
+  return `<div class="casehead"><div style="display:flex;flex-direction:column;gap:4px"><span class="kicker">Case ${c.id} · interview of ${MONTHS[c.month].lab}</span>
+  <h2>Household of ${c.n} ${c.n===1?'person':'people'}</h2></div>${extra||''}</div>
+  <div class="facts">
+   <div class="fact"><b>Head of household</b>${c.head}</div><div class="fact"><b>Sole caregiver</b>${c.solo}</div>
+   <div class="fact"><b>Adult who speaks Spanish</b>${c.spanish?'yes':'no'}</div><div class="fact"><b>Administrative checks</b>${c.adm?'<span style="color:var(--warn)">negative</span>':'no issues'}</div></div>`;
+}
+function factorRows(withPts,editable){
+  const sc=score(st.lv);
+  const mx=Math.max(...sc.contrib,1);
+  return `<div class="tbl"><table><thead><tr><th>Factor</th><th>Recorded level</th>${withPts?'<th class="n">Points</th>':''}${editable?'<th>Doesn\'t add up?</th>':''}</tr></thead><tbody>`+
+  FACT.map((f,j)=>`<tr class="${st.flags.has(j)?'flag':''}"><td>${f.k}</td><td>${editable&&st.flags.has(j)?`<select data-fix="${j}" aria-label="Correct ${f.k}">${f.lab.map((l,ii)=>`<option value="${ii}" ${ii===st.lv[j]?'selected':''}>${l}</option>`).join('')}</select>`:f.lab[st.lv[j]]}</td>
+   ${withPts?`<td class="n"><span class="pts" style="width:${Math.round(60*sc.contrib[j]/mx)}px"></span>${fmt(sc.contrib[j])}</td>`:''}
+   ${editable?`<td><label class="small"><input type="checkbox" data-flag="${j}" ${st.flags.has(j)?'checked':''}> flag</label></td>`:''}</tr>`).join('')+
+  `</tbody></table></div>`+(withPts?`<p class="small muted mono">Total: ${fmt(sc.final)} points · band ${band(sc.final)}. Exact Scorecard formula (geometric mean per block).</p>`:'');
+}
+
+// ---------- mode B: two-track review ----------
+function renderNew(){
+  const c=list('B')[cur.B], trig=triggers(c), full=trig.length>0||st.escalated;
+  const badge=full?`<span class="badge b-full">Full track</span>`:`<span class="badge b-lite">Light track</span>`;
+  const trigHtml=full?`<div class="triggers">${trig.map(x=>`<span class="chip ${x.w?'w':''}">${x.t}</span>`).join('')}${st.escalated?'<span class="chip w">Decision differs from the calculation</span>':''}</div>`:'<p class="small muted">No signals: score far from the cut-off, consistent data, interviewer agrees.</p>';
+  const o=outcome(c,st.lv), fr=fragile(c,st.lv), sc=score(st.lv), k=MONTHS[c.month].k, cut=cutOf(c.month);
+  const cls=full?'':'lite';
+  let html=`<section class="panel ${cls}">${header(c,badge)}${trigHtml}`;
+  if(full){
+    html+=`<div class="step"><div class="step-h"><span class="step-n">1</span><h3>The data, row by row</h3></div>${factorRows(true,true)}<p class="small muted">If a data point doesn't match the report, flag it and correct it: the score is recalculated.</p></div>
+    <div class="step"><div class="step-h"><span class="step-n">2</span><h3>The interviewer's report</h3></div>
+      <div class="perc">${gapPill(c.guess,st.lv)}<span class="small muted">· reason: ${c.reason}</span></div>
+      <p class="note">${c.note}</p><p class="small muted">The view of a person who met the household. Simulated text.</p></div>`;
+  } else {
+    const top=sc.contrib.map((v,j)=>[v,j]).sort((a,b)=>b[0]-a[0]).slice(0,3).filter(x=>x[0]>0.05);
+    html+=`<div class="step"><div class="step-h"><span class="step-n">1</span><h3>Summary sheet</h3></div>
+      <p>${top.map(([v,j])=>`<b>${FACT[j].k}</b>: ${FACT[j].lab[st.lv[j]]} (${fmt(v)} points)`).join(' · ')||'No relevant vulnerability factors'}</p>
+      <p class="small muted mono">Band ${band(sc.final)} · ${o.rank&&o.rank<=k?'well above':'well below'} the month's cut-off</p></div>
+    <div class="step"><div class="step-h"><span class="step-n">2</span><h3>Interviewer's perception</h3></div>
+      <div class="perc">${gapPill(c.guess,st.lv)}</div>
+      <details><summary class="small">Read the full report</summary><p class="note" style="margin-top:8px">${c.note}</p></details>
+      <div><button class="btn sec" id="raise">To review → full track</button></div></div>`;
+  }
+  // step 3: independent decision
+  html+=`<div class="step key"><div class="step-h"><span class="step-n">3</span><h3>Your decision, before seeing the calculated outcome</h3></div>
+    <div class="choices">${['in','wl','ex'].map(x=>`<button class="choice" data-pre="${x}" aria-pressed="${st.pre===x}">${lab[x]}</button>`).join('')}</div>
+    ${full?`<span class="small muted">Which facts convinced you? (at least one)</span><div class="anchors">${FACT.map((f,j)=>`<label class="anchor"><input type="checkbox" data-anc="${j}" ${st.anchors.has(j)?'checked':''}>${f.k}: ${f.lab[st.lv[j]]}</label>`).join('')}<label class="anchor"><input type="checkbox" data-anc="note" ${st.anchors.has('note')?'checked':''}>Interviewer's report</label>${c.adm?`<label class="anchor"><input type="checkbox" data-anc="adm" ${st.anchors.has('adm')?'checked':''}>Administrative check</label>`:''}</div>`:''}
+    <div><button class="btn" id="reveal" ${st.stage===1&&st.pre&&(!full||st.anchors.size)?'':'disabled'}>${st.stage===1?'Record and show the calculated outcome':'Decision recorded'}</button></div></div>`;
+  // steps 4-5
+  if(st.stage>=2){
+    html+=`<div class="step"><div class="step-h"><span class="step-n">4</span><h3>The calculated outcome, in two questions</h3></div>
+      <div class="two">
+        <div class="box"><span class="kicker">Need · reliable</span><span class="big">${fmt(sc.final)} points</span><span>Band ${band(sc.final)} · targeting threshold ${fmt(TARGET)} (assumption)</span></div>
+        <div class="box"><span class="kicker">Budget · ${MONTHS[c.month].lab}</span><span class="big">${c.adm?'—':'#'+o.rank+' of '+MONTHS[c.month].scores.length}</span><span>${k} places · cut-off ${fmt(cut)} points</span></div>
+      </div>
+      <p>Outcome: <span class="outcome o-${o.code}">${o.txt}</span> <span class="muted">· ${o.why}</span></p>
+      ${fr.length?`<div class="warnbox"><b>Fragile decision.</b> It would change if: ${fr.slice(0,3).join('; ')}. Check these data points.</div>`:''}</div>`;
+    const agree=st.pre===o.code;
+    if(st.stage===2){
+      if(agree){
+        html+=`<div class="step"><div class="step-h"><span class="step-n">5</span><h3>Confirm</h3></div><p>Your decision matches the calculated outcome.</p><div><button class="btn" id="confirm-agree">Confirm: ${lab[o.code]}</button></div></div>`;
+      } else if(!full){
+        html+=`<div class="step"><p>Your decision (<b>${lab[st.pre]}</b>) does not match the calculation (<b>${o.txt}</b>). The case moves to the full track.</p><div><button class="btn" id="escalate">Open the full track</button></div></div>`;
+      } else {
+        html+=`<div class="step key"><div class="step-h"><span class="step-n">5</span><h3>Reversed burden</h3></div>
+         <p>Your decision (<b>${lab[st.pre]}</b>) differs from the calculated outcome (<b>${o.txt}</b>).</p>
+         <div class="two"><div class="box"><span class="kicker">Keep your decision</span><p class="small">No justification required.</p><button class="btn" id="keep">Keep: ${lab[st.pre]}</button></div>
+         <div class="box"><span class="kicker">Switch to the calculated outcome</span><p class="small">Name the fact that changed your mind.</p>
+         <select id="why"><option value="">Choose a fact…</option>${FACT.map((f,j)=>`<option value="${f.k}">${f.k}: ${f.lab[st.lv[j]]}</option>`).join('')}<option value="places">Places available this month</option>${c.adm?'<option value="adm">Administrative check</option>':''}</select>
+         <button class="btn sec" id="switch" disabled>Switch to: ${o.txt}</button></div></div></div>`;
+      }
+    }
+  }
+  html+=`</section>`;
+  app.innerHTML=html; bindNew(c,o);
+}
+function bindNew(c,o){
+  app.querySelectorAll('[data-flag]').forEach(el=>el.onchange=()=>{const j=+el.dataset.flag;el.checked?st.flags.add(j):(st.flags.delete(j),st.lv[j]=list('B')[cur.B].recIdx[j]);renderNew();});
+  app.querySelectorAll('[data-fix]').forEach(el=>el.onchange=()=>{st.lv[+el.dataset.fix]=+el.value;renderNew();});
+  app.querySelectorAll('[data-pre]').forEach(el=>el.onclick=()=>{if(st.stage>1)return;st.pre=el.dataset.pre;renderNew();});
+  app.querySelectorAll('[data-anc]').forEach(el=>el.onchange=()=>{if(st.stage>1){el.checked=!el.checked;return;}const v=isNaN(+el.dataset.anc)?el.dataset.anc:+el.dataset.anc;el.checked?st.anchors.add(v):st.anchors.delete(v);renderNew();});
+  const g=id=>document.getElementById(id);
+  if(g('raise')) g('raise').onclick=()=>{st.escalated=true;st.raised=true;renderNew();};
+  if(g('reveal')) g('reveal').onclick=()=>{st.stage=2;st.preAt=performance.now();renderNew();};
+  if(g('escalate')) g('escalate').onclick=()=>{st.escalated=true;st.stage=1;st.pre=null;renderNew();};
+  if(g('confirm-agree')) g('confirm-agree').onclick=()=>finishB(c,o,o.code,'agree');
+  if(g('keep')) g('keep').onclick=()=>finishB(c,o,st.pre,'kept');
+  if(g('why')) g('why').onchange=e=>{g('switch').disabled=!e.target.value;st.why=e.target.value;};
+  if(g('switch')) g('switch').onclick=()=>finishB(c,o,o.code,'switched to calculation: '+st.why);
+}
+function anchorCoherence(c,dec){
+  // coherent if the cited factors are above the minimum level when including, or at the minimum level when excluding.
+  // Only scored where the direction is clear: inclusion (vulnerability factors present) or exclusion for low need (factors absent).
+  // Waiting list and administrative exclusions depend on budget and rules, not on the factors.
+  const fa=[...st.anchors].filter(x=>typeof x==='number'); if(!fa.length||dec==='wl'||(dec==='ex'&&c.adm)) return null;
+  const ok=fa.filter(j=>dec==='in'?st.lv[j]>0:st.lv[j]===0).length;
+  return ok/fa.length;
+}
+function finishB(c,o,final,how){
+  const recO=outcome(c,c.recIdx);
+  LOG.B[c.id]={id:c.id,path:(triggers(c).length||st.escalated)?'full':'light',raised:!!st.raised,pre:st.pre,suggested:recO.code,shown:o.code,final,how,
+    flags:[...st.flags].map(j=>FACT[j].k),corrected:[...st.flags].filter(j=>st.lv[j]!==c.recIdx[j]).map(j=>FACT[j].k+': '+FACT[j].lab[c.recIdx[j]]+' → '+FACT[j].lab[st.lv[j]]),
+    anchors:[...st.anchors].map(x=>typeof x==='number'?FACT[x].k:x),coherence:anchorCoherence(c,final),ref:c.ref.code,secs:Math.round((performance.now()-t0)/1000)};
+  cur.B++; render();
+}
+
+// ---------- mode A: reconstruction of Cashy ----------
+function oldReason(c){
+  const rec=c.old.rec==='in';
+  return `<div class="oldreason">
+   <div><b>Summary</b><p>Household of ${c.n} ${c.n===1?'person':'people'}. ${c.note.split('.')[0]}.</p></div>
+   <div><b>Possible contradictions or bias</b><p>${rec?'No significant contradictions between the form and the report.':"The interviewer's report may emphasise emotional aspects not reflected in the objective form data."}</p></div>
+   <div><b>Possible inconsistencies</b><p>No relevant inconsistencies between the sections of the form.</p></div>
+   <div><b>Reasons for inclusion</b><p>Unmet basic needs and some negative coping strategies are present.</p></div>
+   <div><b>Reasons for exclusion</b><p>${rec?'Limited compared with other cases analysed.':'Compared with other cases analysed, the vulnerability factors are less severe or less combined.'}</p></div>
+   <div><b>Relative vulnerability</b><p>${rec?'High compared with other cases.':'Medium or low compared with other cases.'}</p></div>
+   <div><b>Final recommendation</b><p>${rec?'Inclusion is recommended.':'Exclusion is recommended.'}</p></div></div>`;
+}
+function renderOld(){
+  const c=CASES[cur.A];
+  let html=`<section class="panel old">${header(c,'<span class="badge b-old">Current screen</span>')}
+  <div class="step"><div class="step-h"><span class="step-n">1</span><h3>Registration form</h3></div>${factorRows(false,false)}
+    <p class="note">${c.note}</p></div>
+  <div class="step"><div class="step-h"><span class="step-n">2</span><h3>Cashy-AI reasoning</h3></div>${oldReason(c)}<p class="small muted">Simulated text, in the style of the 7 fixed sections described in the brief.</p></div>
+  <div class="stmt"><b class="kicker" style="color:var(--old)">Reasoning process · Safeguards</b>
+    <p><b>How was the analysis done?</b> The most important data from each form were collected; more weight was given to factors indicating greater vulnerability; each case was compared with the others; the information was checked and compared with the interviewer's opinion.</p>
+    <p><b>Transparency:</b> clear information from the standard forms is used. <b>Responsibility:</b> "A person reviews and makes the final decision, not the AI". <b>Accountability:</b> the AI only helps analyse the information according to the given rules.</p>
+    <p class="small muted">Shortened version of the panel shown to the "statements" group (Annex II of the brief).</p></div>
+  <div class="answer"><div><span class="kicker">Cashy score</span><div class="big">${fmt(c.old.score)}</div></div><div><span class="kicker">Band</span><div class="big">${band(c.old.score)}</div></div><div><span class="kicker">Recommendation</span><div class="big" style="color:var(--old)">${c.old.rec==='in'?'INCLUDE':'EXCLUDE'}</div></div></div>
+  <div class="step"><div class="step-h"><span class="step-n">3</span><h3>How correct is the recommendation? (1–5)</h3></div>
+    <div class="rate">${[1,2,3,4,5].map(v=>`<button class="choice" data-rate="${v}" aria-pressed="${st.rating===v}">${v}</button>`).join('')}</div></div>
+  <div class="step"><div class="step-h"><span class="step-n">4</span><h3>Do you accept or override the recommendation?</h3></div>
+    <div class="choices"><button class="btn old" id="acc" ${st.rating?'':'disabled'}>Accept: ${c.old.rec==='in'?'include':'exclude'}</button><button class="btn sec" id="ovr" ${st.rating?'':'disabled'}>Override: ${c.old.rec==='in'?'exclude':'include'}</button></div></div>
+  </section>`;
+  app.innerHTML=html;
+  app.querySelectorAll('[data-rate]').forEach(el=>el.onclick=()=>{st.rating=+el.dataset.rate;renderOld();});
+  const fin=(acc)=>{const fd=acc?c.old.rec:(c.old.rec==='in'?'ex':'in');LOG.A[c.id]={id:c.id,suggested:c.old.rec,rating:st.rating,final:fd,accepted:acc,ref:c.ref.code,secs:Math.round((performance.now()-t0)/1000)};cur.A++;render();};
+  document.getElementById('acc').onclick=()=>fin(true);
+  document.getElementById('ovr').onclick=()=>fin(false);
+}
+
+function renderDone(){
+  app.innerHTML=`<section class="panel"><h2>Queue complete</h2><p>You have reviewed all cases in mode ${mode==='A'?'A (current Cashy)':'B (two-track review)'}.</p>
+  <div class="choices"><button class="btn" id="go-other">Try the other mode</button><button class="btn sec" id="redo">Restart this mode</button></div></section>`;
+  document.getElementById('go-other').onclick=()=>setMode(mode==='A'?'B':'A');
+  document.getElementById('redo').onclick=()=>{LOG[mode]={};cur[mode]=0;render();};
+}
+
+
+// ---------- interviewer ----------
+const esc=t=>String(t).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+let IV=null;
+function ivNew(example){return example?{month:'2024-01',n:4,head:'man',solo:'no',spanish:false,lv:[0,0,0,0,1,3,2,1],adm:{int:false,dup:false,asylum:false},
+  note:"Family of four. No adult speaks Spanish: they cannot make themselves understood at the clinic or at school. They sleep in a night-only shelter; during the day the children beg with their mother.",
+  guess:null,reason:'',raise:false,stage:'form',t0:performance.now(),seen:new Set(),resolved:new Set(),example:true}
+ :{month:'2023-12',n:1,head:'—',solo:'—',spanish:true,lv:[0,0,0,0,0,0,0,0],adm:{int:false,dup:false,asylum:false},note:'',guess:null,reason:'',raise:false,stage:'form',t0:performance.now(),seen:new Set(),resolved:new Set(),example:false};}
+function ivChecks(v){const out=[];
+  if(!v.spanish&&v.lv[1]===0) out.push({id:'lang',t:'No adult speaks Spanish, but "Language" is recorded as <b>no barrier</b>. Ask the household in which language they can use services.'});
+  if(v.n===1&&v.lv[7]>=2) out.push({id:'dep',t:'Single person with a <b>dependency</b> burden. Are there dependants who do not live with them?'});
+  if(v.n===1&&v.solo==='yes') out.push({id:'solo',t:'<b>Sole caregiver</b> but a one-person household: check the household composition.'});
+  if(v.lv[4]===0&&v.lv[6]===2) out.push({id:'basic',t:'Basic needs <b>met</b> but <b>high-risk</b> negative coping: check how the household covers its needs.'});
+  out.forEach(x=>v.seen.add(x.id)); [...v.seen].forEach(id=>{if(!out.find(x=>x.id===id))v.resolved.add(id);});
+  return out;}
+function ivCase(v){const c={id:'F-NEW-'+(ADDED.length+1),month:v.month,final:-999,f:v.lv.map((i,j)=>FACT[j].lv[i]),n:v.n,spanish:v.spanish,head:v.head,solo:v.solo,
+  adm:v.adm.int?'intentions incompatible with the programme':v.adm.dup?'duplicate registration':v.adm.asylum?'asylum procedure status':null,
+  note:esc(v.note),guess:v.guess,reason:v.reason||'—',raise:v.raise};
+  c.trueIdx=v.lv.slice();c.recIdx=v.lv.slice();c.ref=outcome(c,c.trueIdx);return c;}
+function renderInterview(){
+  if(!IV) IV=ivNew(true);
+  const v=IV, locked=v.stage!=='form', chk=ivChecks(v);
+  const seg=(name,opts,val,dis)=>`<div class="seg">${opts.map(([k,l])=>`<label><input type="radio" name="${name}" value="${k}" ${String(val)===String(k)?'checked':''} ${dis?'disabled':''}>${l}</label>`).join('')}</div>`;
+  let html=`<section class="panel int"><div class="casehead"><div style="display:flex;flex-direction:column;gap:4px"><span class="kicker">Interview form · KoBo (simulated)</span><h2>New interview${v.example?' · pre-filled example':''}</h2></div>
+   <div class="choices"><button class="btn sec" id="iv-blank">Blank form</button><button class="btn sec" id="iv-ex">Load example</button></div></div>
+  <div class="iv-grid"><div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+   <div class="step"><div class="step-h"><span class="step-n">1</span><h3>Household</h3></div>
+    <div class="qrow"><span>Interview month</span><select id="iv-month" ${locked?'disabled':''}>${Object.entries(MONTHS).map(([k,m])=>`<option value="${k}" ${k===v.month?'selected':''}>${m.lab}</option>`).join('')}</select></div>
+    <div class="qrow"><span>Members</span><select id="iv-n" ${locked?'disabled':''}>${[1,2,3,4,5,6,7,8].map(x=>`<option ${x===v.n?'selected':''}>${x}</option>`).join('')}</select></div>
+    <div class="qrow"><span>Head of household</span>${seg('iv-head',[['woman','woman'],['man','man'],['—','not applicable']],v.head,locked)}</div>
+    <div class="qrow"><span>Sole caregiver</span>${seg('iv-solo',[['yes','yes'],['no','no'],['—','not applicable']],v.solo,locked)}</div>
+    <div class="qrow"><span>At least one adult speaks Spanish</span>${seg('iv-sp',[['1','yes'],['0','no']],v.spanish?1:0,locked)}</div></div>
+   <div class="step"><div class="step-h"><span class="step-n">2</span><h3>Scorecard questions</h3></div>
+    ${FACT.map((f,j)=>`<div class="qrow"><span>${f.k}</span>${seg('iv-f'+j,f.lab.map((l,i)=>[i,l]),v.lv[j],locked)}</div>`).join('')}
+    <p class="small muted">Level descriptions for intermediate levels are indicative; the numeric values are those of the Scorecard in S8.</p></div>
+   <div class="step"><div class="step-h"><span class="step-n">3</span><h3>Administrative checks</h3></div>
+    ${[['int','Intentions incompatible with the programme'],['dup','Duplicate registration'],['asylum','Issue with the asylum procedure']].map(([k,l])=>`<label class="small"><input type="checkbox" data-adm="${k}" ${v.adm[k]?'checked':''} ${locked?'disabled':''}> ${l}</label>`).join('')}</div>
+   <div class="step"><div class="step-h"><span class="step-n">4</span><h3>Report</h3></div>
+    <textarea id="iv-note" ${locked?'readonly':''} aria-label="Interviewer's report" placeholder="What you saw and heard during the interview">${esc(v.note)}</textarea></div>
+   <div class="step key"><div class="step-h"><span class="step-n">5</span><h3>Your assessment, before seeing the score</h3></div>
+    <p class="small muted">No calculations: based on what you saw, which vulnerability band would you put this household in?</p>
+    ${seg('iv-guess',BANDS.map(b=>[b,b]),v.guess,locked)}
+    <div class="qrow"><span>Main reason</span><select id="iv-reason" ${locked?'disabled':''}><option value="">—</option>${['health','housing','safety / protection','documents','language','other'].map(r=>`<option ${r===v.reason?'selected':''}>${r}</option>`).join('')}</select></div>
+    <label class="small"><input type="checkbox" id="iv-raise" ${v.raise?'checked':''} ${locked?'disabled':''}> Flag "to review": the case will always go to the full track</label>
+    ${locked?'':`<div><button class="btn" id="iv-close" ${v.guess&&v.note.trim().length>20?'':'disabled'}>Close the interview and calculate the score</button></div><p class="small muted" id="iv-hint">${v.guess?'':'Choose a band to close the interview.'}${v.note.trim().length>20?'':' Write the report.'}</p>`}
+   </div>`;
+  if(locked){
+    const c=ivCase(v), sc=score(v.lv).final, tr=triggers(c);
+    html+=`<div class="locked-score"><span class="kicker" style="color:var(--ok)">Interview closed · score calculated</span>
+      <div class="two"><div class="box"><span class="kicker">Scorecard score</span><span class="big">${fmt(sc)}</span><span>Band ${band(sc)}</span></div>
+      <div class="box"><span class="kicker">Your estimate</span><span class="big">${v.guess}</span><span class="small muted">Recorded before the score · cannot be changed</span></div></div>
+      <div class="perc">${gapPill(v.guess,v.lv)}</div>
+      <p>Routing: ${tr.length?'<span class="badge b-full">Full track</span>':'<span class="badge b-lite">Light track</span>'}</p>
+      ${tr.length?`<div class="triggers">${tr.map(x=>`<span class="chip ${x.w?'w':''}">${x.t}</span>`).join('')}</div>`:''}
+      <p class="small muted">Only the caseworker sees the outcome (inclusion, waiting list, exclusion). The interviewer sees the score, not the decision.</p>
+      <div class="choices">${v.sent?'<span class="toast">Sent to the caseworker\'s queue.</span><button class="btn" id="iv-go">Open the review</button>':'<button class="btn" id="iv-send">Send to the caseworker</button>'}<button class="btn sec" id="iv-new">New interview</button></div></div>`;
+  }
+  html+=`</div><aside class="live"><div class="panel"><h3>Live checks</h3><p class="small muted">While the household is still present: the only moment when a wrong data point can be fixed at the source.</p>
+    ${chk.length?chk.map(x=>`<div class="chk">${x.t}</div>`).join(''):'<div class="chk ok">No inconsistencies in the data entered.</div>'}
+    ${v.resolved.size?`<p class="small" style="color:var(--ok)">Inconsistencies resolved during the interview: ${v.resolved.size}</p>`:''}</div>
+    <div class="panel"><h3>What you don't see here</h3><p class="small muted">The score only appears after your assessment, so it cannot influence it. You see neither the budget nor the outcome: those belong to the system and the caseworker.</p></div></aside></div></section>`;
+  app.innerHTML=html; bindInterview();
+}
+function bindInterview(){
+  const v=IV, g=id=>document.getElementById(id), rr=()=>renderInterview();
+  g('iv-ex').onclick=()=>{IV=ivNew(true);rr();}; g('iv-blank').onclick=()=>{IV=ivNew(false);rr();};
+  if(v.stage==='form'){
+    g('iv-month').onchange=e=>{v.month=e.target.value;rr();};
+    g('iv-n').onchange=e=>{v.n=+e.target.value;rr();};
+    app.querySelectorAll('input[type=radio]').forEach(el=>el.onchange=()=>{const n=el.name,val=el.value;
+      if(n==='iv-head')v.head=val; else if(n==='iv-solo')v.solo=val; else if(n==='iv-sp')v.spanish=val==='1'; else if(n==='iv-guess')v.guess=val; else if(n.startsWith('iv-f'))v.lv[+n.slice(4)]=+val; v.example=false; rr();});
+    app.querySelectorAll('[data-adm]').forEach(el=>el.onchange=()=>{v.adm[el.dataset.adm]=el.checked;rr();});
+    g('iv-note').oninput=e=>{v.note=e.target.value;const b=g('iv-close');if(b)b.disabled=!(v.guess&&v.note.trim().length>20);};
+    g('iv-reason').onchange=e=>{v.reason=e.target.value;};
+    g('iv-raise').onchange=e=>{v.raise=e.target.checked;};
+    if(g('iv-close')) g('iv-close').onclick=()=>{v.stage='scored';v.closedAt=performance.now();rr();};
+  } else {
+    if(g('iv-send')) g('iv-send').onclick=()=>{const c=ivCase(v);ADDED.push(c);v.sent=true;v.sentIdx=CASES.length+ADDED.length-1;
+      LOG.I.push({id:c.id,month:v.month,guess:v.guess,band_scorecard:band(score(v.lv).final),gap:gapOf(v.guess,v.lv),reason:v.reason,raise:v.raise,score:+score(v.lv).final.toFixed(2),checks_shown:[...v.seen],checks_resolved:[...v.resolved],secs:Math.round((v.closedAt-v.t0)/1000)});rr();};
+    // open the review directly on the case just sent
+    if(g('iv-go')) g('iv-go').onclick=()=>{cur.B=v.sentIdx;setMode('B');};
+    g('iv-new').onclick=()=>{IV=ivNew(false);rr();};
+  }
+}
+
+render();
+})();
+</script>
+
+</body></html>
